@@ -1,16 +1,16 @@
 ---
 name: opencanvas-prototype
-description: Build and iterate mobile & desktop prototypes for human review over the Open Canvas MCP. Use when a PM or builder wants a shareable, comment-able prototype that an agent can revise from feedback — "prototype this flow", "make a clickable mockup", "let stakeholders comment on this screen", or any request that pairs UI generation with a review loop.
+description: Build and iterate mobile & desktop prototypes for human review over the opencanvas MCP. Use when a PM or builder wants a shareable, comment-able prototype that an agent can revise from feedback — "prototype this flow", "make a clickable mockup", "let stakeholders comment on this screen", or any request that pairs UI generation with a review loop.
 ---
 
-# Open Canvas — authoring & iterating mobile & desktop prototypes
+# opencanvas — authoring & iterating mobile & desktop prototypes
 
-Open Canvas is an agent-first, MCP-native prototype-review surface. You author a multi-page mobile or desktop prototype (one HTML/CSS/JS document per screen); humans open a share link, review each page in a device frame, and pin comments to specific elements. You read those comments, regenerate the page, and the comment anchors survive the regeneration. The loop — **comment → you iterate → anchors persist → resolve** — is the product.
+opencanvas is an agent-first, MCP-native prototype-review surface. You author a multi-page mobile or desktop prototype (one HTML/CSS/JS document per screen); humans open a share link, review each page in a device frame, and pin comments to specific elements. You read those comments, regenerate the page, and the comment anchors survive the regeneration. The loop — **comment → you iterate → anchors persist → resolve** — is the product.
 
 ## When to trigger
 - The user wants a mobile or desktop prototype/mockup others will review and comment on.
 - The user wants an agent to act on prototype feedback (not a one-off image).
-- The user references Open Canvas, a "concept", a share link, or the review loop.
+- The user references opencanvas, a "concept", a share link, or the review loop.
 
 Not for: static screenshots or slide decks (that's Deckpipe). Both mobile and desktop form factors are supported — pick with `device` at create time.
 
@@ -24,7 +24,7 @@ If the brief is thin, ask up to a few sharp questions before committing:
 
 Then **calibrate one page first**: author ONE representative content-carrying screen (not the title/splash), `preview_page` it, and READ the screenshot — this is the one screenshot you must look at. Get that screen the way you want it before building the rest at the same bar; it stops you propagating a rendering mistake across every screen.
 
-**Then draft fast and hand off — don't over-verify.** After creating all screens, do a *cheap* health sweep: check `report.ok` per page (it's a boolean — you do NOT need to open every screenshot). Look at a screenshot only when `report.ok` is false or a screen seems off; fix real `off_canvas`/JS-error/broken-image issues, then **share the link.** Open Canvas is a human-review tool: the reviewer is the better judge of "is this good," and the comment→iterate loop is the product. Getting a not-broken prototype in front of them quickly beats perfecting every pixel first. Save the deep work — reading full screenshots, `{expect}` interaction assertions — for **iteration**, where you verify the specific thing a comment is about (not the whole app upfront).
+**Then draft fast and hand off — don't over-verify.** After creating all screens, do a *cheap* health sweep: check `report.ok` per page (it's a boolean — you do NOT need to open every screenshot). Look at a screenshot only when `report.ok` is false or a screen seems off; fix real `off_canvas`/JS-error/broken-image issues, then **share the link.** opencanvas is a human-review tool: the reviewer is the better judge of "is this good," and the comment→iterate loop is the product. Getting a not-broken prototype in front of them quickly beats perfecting every pixel first. Save the deep work — reading full screenshots, `{expect}` interaction assertions — for **iteration**, where you verify the specific thing a comment is about (not the whole app upfront).
 
 ## Building for the device frame
 
